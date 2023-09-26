@@ -13,6 +13,18 @@
   <nav class="navbar bg-info">
     <a class="navbar-brand text-light p-3" href="/">TM</a>
   </nav>
+  <div class="container">
+    <div style="margin-top: 80px;" class="text-center p-5 mb-4 bg-light">
+      <h1 class="display-4">Task Master <span role="img" aria-label="Memo">📝</span></h1>
+      <h4 class="mt-4">Unleash Your Potential: Remember, Record, Succeed!</h4>
+      {{#if logged_in}}
+      <a class="btn btn-primary btn-lg mt-4" href="./notes.html" role="button">Get Started</a>
+      <a href="/profile">Profile</a>
+      <button class="no-button" id="logout">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </div>
   </div>
   <script id="template" type="text/x-handlebars-template">
     <div class="container">
@@ -24,7 +36,7 @@
         <a href="/profile">Profile</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="../../public/js/login.js">Login</a>
+       <a href="../../public/js/login.js">Login</a>
         {{/if}}
       </div>
     </div>
