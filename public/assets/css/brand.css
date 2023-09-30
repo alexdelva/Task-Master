@@ -1,0 +1,60 @@
+:root {
+  --brand-white: #dbdbdb;
+  --brand-teal-light: #3e829a69;
+  --brand-dark-gray: #363636;
+  --brand-gray: #000000;
+  --brand-gray-shadow: #1b1b1b;
+  --brand-shadow: 3px 3px 3px var(--brand-gray-shadow);
+}
+
+h1, h2, h3, h4, h5, h6, p, div, button, a {
+  color: var(--brand-white);
+  font-family: 'Inter', sans-serif;
+  margin-top: 1%;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-left: 3%;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-left: 3%;
+}
+
+.title {
+  font-size: 28px;
+  color: var(--brand-white);
+  white-space: nowrap; /* Prevent word breaks */
+}
+
+h4 {
+  font-weight: 700;
+}
+
+a {
+  color: var(--brand-white);
+}
+
+a:hover {
+  color: var(--brand-teal-light)
+}
+
+div {
+  font-weight: 500;
+}
+
+button {
+  box-shadow: var(--brand-shadow);
+  border-radius: 20px 10px;
+}

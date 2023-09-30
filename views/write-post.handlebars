@@ -1,0 +1,43 @@
+  {{#unless post}}
+  <form class="write-blog-form">
+    <input type="hidden" id="hidden-user-id" value="{{userId}}">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" id="title-input" type="text" placeholder="Bestow a name upon your tasks, let them wear their titles with pride!">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Task: </label>
+      <div class="control">
+        <textarea class="textarea" id="body-input" type="text" placeholder="Let your thoughts flow onto the page, your task awaits your words!"></textarea>
+      </div>
+    </div>
+    
+    <button class="form-button" id="post-blog-button">Save Task</button>
+  </form>
+  {{/unless}}
+
+  {{#if post}}
+  <form class="write-blog-form">
+    <input type="hidden" id="hidden-user-id" value="{{userId}}">
+    <input type="hidden" id="hidden-post-id" value="{{postId}}">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" id="title-input" type="text" value="{{post.title}}">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Task Content</label>
+      <div class="control">
+        <textarea class="textarea" id="body-input" type="text" value="{{post.content}}">{{post.content}}</textarea>
+      </div>
+    </div>
+
+    <button class="form-button" id="update-blog-button">Update Task</button>
+    <button class="form-button" id="delete-blog-button" value="{{postId}}">Delete Task</button>
+  </form>
+  {{/if}}
