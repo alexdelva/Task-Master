@@ -1,15 +1,11 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-const viewRoutes = require('./view-routes')
 const writeRoutes = require('./write-routes')
 const withAuth = require('../utils/auth.js')
 const { Post, User, } = require('../models')
 
 // API Routes
 router.use('/api', apiRoutes);
-
-// VIEW POST ROUTES
-router.use('/view', viewRoutes)
 
 // WRITE/EDIT POST ROUTES
 router.use('/write', writeRoutes)
