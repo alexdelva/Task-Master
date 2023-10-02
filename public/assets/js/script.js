@@ -179,29 +179,4 @@ $('#delete-blog-button').on('click', (e) => {
 })
 
 
-// ADD COMMENT HANDLER
-const addComment = async () => {
-  const postId = $('#add-comment-button').val()
-  const comment = prompt('Please type your comment.')
-  // console.log(comment)
-  
-  const response = await fetch('/api/comments', {
-    method: 'POST',
-    body: JSON.stringify({content: comment, post_id: postId}),
-    headers: { 'Content-Type': 'application/json' }
-  })
 
-  if (response.ok) {
-    alert('Comment added')
-    location.reload()
-  } else {
-    // console.log(response)
-    alert('Something went wrong. You must be signed in to leave a comment.')
-    window.location.href = '/login'
-  }
-}
-
-$('#add-comment-button').on('click', (e) => {
-  e.preventDefault()
-  addComment()
-})
