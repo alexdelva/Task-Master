@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models')
+const { Post, User, } = require('../models')
 
 
 // View Blog Route
@@ -13,9 +13,6 @@ router.get('/:id', async (req, res) => {
     }
 
     const blogPost = postData.get({plain: true})
-
-    const commentData = await Comment.findAll({where: {post_id: req.params.id}, include: {model: User}})
-    const comments = commentData.map((comment) => comment.get({plain: true}))
 
     res.render('blog-post', {post: blogPost, comments: comments.reverse(), loggedIn: req.session.loggedIn})
   } catch (err) {
