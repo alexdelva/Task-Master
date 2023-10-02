@@ -41,7 +41,7 @@ In the future, the application can be enhanced by:
 </ul>
 
 ## Deployed Application (Heroku)
-# <a href="https://tech-blog-cf-b75b84d52c37.herokuapp.com/">Taskmaster</a>
+# <a href="https://taskmaster-grp3-ef54a6c054dc.herokuapp.com/login">Taskmaster</a>
 
 
 
