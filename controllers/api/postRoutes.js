@@ -14,7 +14,7 @@ router.get('/:id', async (req, res) => {
   try {
     const post = await Post.findByPk(req.params.id).catch((err) => res.status(500).json(err))
     if (!post) {
-      res.status(404).json({message: 'No post found with this id!'})
+      res.status(404).json({message: 'No task found with this id!'})
       return;
     }
     res.status(200).json(post)
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
   const newPost = await Post.create(req.body)
       .catch((err) => res.status(500).json(err))
 
-  res.status(200).json({message: 'Post created', newPost})
+  res.status(200).json({message: 'Task created', newPost})
 })
 
 
@@ -40,10 +40,10 @@ router.put('/:id', async (req, res) => {
   try {
     const post = await Post.update(req.body, {where: {id: req.params.id}})
     if (!post) {
-      res.status(404).json({ message: 'No post found with this id!' });
+      res.status(404).json({ message: 'No task found with this id!' });
       return;
     }
-    res.status(200).json({message: 'Post updated'})
+    res.status(200).json({message: 'Task updated'})
   } catch (err) {
     res.status(500).json(err)
     console.log(err)
@@ -63,7 +63,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json({message: 'Post deleted'});
+    res.status(200).json({message: 'Task deleted'});
 
   } catch (err) {
     res.status(500).json(err);
