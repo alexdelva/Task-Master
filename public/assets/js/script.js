@@ -79,7 +79,7 @@ $('#logout-link').on('click', (e) => {
 })
 
 
-// POST TASK HANDLER
+// TASK HANDLER
 const postBlog = async () => {
   const userId = $('#hidden-user-id').val()
   const postTitle = $('#title-input').val()
@@ -151,7 +151,7 @@ $('#update-blog-button').on('click', (e) => {
 
 // DELETE TASK HANDLER
 const deleteBlog = async (postId) => {
-  const confirmResponse = confirm('Are you sure you want to delete this post forever?')
+  const confirmResponse = confirm('Are you sure you would like to remove this task?')
   // console.log(confirmResponse)
 
   if (confirmResponse) {
@@ -161,7 +161,7 @@ const deleteBlog = async (postId) => {
     })
 
     if (response.ok) {
-      alert('Post deleted')
+      alert('Task deleted')
       window.location.href = '/dashboard'
     } else {
       // console.log(response)
