@@ -95,7 +95,7 @@ const postBlog = async () => {
     });
 
     if (response.ok) {
-      alert('Post created')
+      alert('Task created')
       window.location.href = '/dashboard'
     } else {
       // console.log(response)
