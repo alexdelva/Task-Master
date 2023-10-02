@@ -130,11 +130,11 @@ const updateBlog = async () => {
     });
 
     if (response.ok) {
-      alert('Post updated')
+      alert('Task updated')
       window.location.href = '/dashboard'
     } else {
       // console.log(response)
-      alert('Failed to update post')
+      alert('Failed to update task')
     }
   
   } else {
