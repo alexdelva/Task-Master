@@ -2,7 +2,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const writeRoutes = require('./write-routes')
 const withAuth = require('../utils/auth.js')
-const { Post, User, } = require('../models')
+const { Post, User, Comment } = require('../models')
 
 // API Route
 router.use('/api', apiRoutes);
