@@ -81,7 +81,7 @@ main {
   color: var(--brand-white)
 }
 
-/* HOMEPAGE AND DASHBOARD CARDS */
+/* DASHBOARD CARD */
 .card-holder {
   margin-top: 25px;
   margin-bottom: 1px;
@@ -242,7 +242,7 @@ form {
 }
 
 
-/* BLOG POST PAGE */
+/* content */
 .blog-post-wrapper {
   width: 100%;
   display: flex;
